@@ -85,11 +85,6 @@ const AddProduct = () => {
                     status: formData.status,
                 };
 
-<<<<<<< HEAD
-                // Save product information to the database
-                // const result = await fetch('https://mern-server-1-evbt.onrender.com/products', {
-=======
->>>>>>> a5283e47f0f9fb83e8805a80c14a1291f464c101
                 const result = await fetch('http://localhost:5000/products', {
                     method: 'POST',
                     headers: {
