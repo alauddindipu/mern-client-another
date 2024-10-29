@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
 
       // Send user data to backend
       const response = await fetch(
-        "https://mern-server-1-evbt.onrender.com/users",
+        "https://mern-backend-v2.onrender.com/users",
         {
           method: "POST",
           headers: {
@@ -79,7 +79,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         try {
           const res = await fetch(
-            `https://mern-server-1-evbt.onrender.com/user/${currentUser.uid}`
+            `https://mern-backend-v2.onrender.com/user/${currentUser.uid}`
           );
 
           if (!res.ok) {

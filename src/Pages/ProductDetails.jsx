@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`https://mern-server-1-evbt.onrender.com/product/${id}`)
+    fetch(`https://mern-backend-v2.onrender.com/product/${id}`)
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);
@@ -52,7 +52,7 @@ export default function ProductDetails() {
 
 
     // Make API call to update user information
-    fetch("https://mern-server-1-evbt.onrender.com/buy", {
+    fetch("https://mern-backend-v2.onrender.com/buy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

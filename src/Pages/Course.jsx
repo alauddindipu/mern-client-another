@@ -9,7 +9,7 @@ const Course = () => {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch("https://mern-server-1-evbt.onrender.com/totalProducts")
+    fetch("https://mern-backend-v2.onrender.com/totalProducts")
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);

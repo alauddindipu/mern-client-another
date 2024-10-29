@@ -45,7 +45,7 @@ const BuyProduct = () => {
 
 
     // Make API call to update user information
-    fetch("https://mern-server-1-evbt.onrender.com/buy", {
+    fetch("https://mern-backend-v2.onrender.com/buy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

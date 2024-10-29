@@ -10,7 +10,7 @@ export default function HomeCategoryLoad() {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        "https://mern-server-1-evbt.onrender.com/allproducts"
+        "https://mern-backend-v2.onrender.com/allproducts"
       );
       const data = await response.json();
       setProducts(data);

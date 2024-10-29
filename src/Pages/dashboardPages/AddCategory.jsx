@@ -14,7 +14,7 @@ function AddCategory() {
         const category = { cname, cid };
         // console.log(category);
 
-        fetch("https://mern-server-1-evbt.onrender.com/category", {
+        fetch("https://mern-backend-v2.onrender.com/category", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

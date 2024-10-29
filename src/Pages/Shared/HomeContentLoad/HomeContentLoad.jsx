@@ -5,7 +5,7 @@ export default function HomeContentLoad() {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`https://mern-server-1-evbt.onrender.com/products`)
+    fetch(`https://mern-backend-v2.onrender.com/products`)
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);

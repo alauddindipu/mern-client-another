@@ -12,7 +12,7 @@ const TotalProducts = () => {
 
     const handleDelete = (_id) => {
         // console.log(_id);
-        fetch(`https://mern-server-1-evbt.onrender.com/product/${_id}`, {
+        fetch(`https://mern-backend-v2.onrender.com/product/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
