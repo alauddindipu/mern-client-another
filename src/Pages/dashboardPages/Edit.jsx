@@ -15,9 +15,9 @@ const Edit = () => {
         const description = form.get("description");
 
         const updatedProduct = { productName, description };
-        console.log("Updated:", updatedProduct);
+        // console.log("Updated:", updatedProduct);
 
-        fetch(`http://localhost:5000/product/${loadedProduct._id}`, {
+        fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${loadedProduct._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -26,7 +26,7 @@ const Edit = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (data.modifiedCount) {
                     toast.success("Updated Successfully", {
                         position: "top-right",

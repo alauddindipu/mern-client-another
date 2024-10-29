@@ -26,7 +26,7 @@ const Profile = () => {
 
       // Make API call to update user information
       const response = await fetch(
-        `http://localhost:5000/user/${user._id}`,
+        `https://mern-project-react-routing-firebase-server.vercel.app/user/${user._id}`,
         {
           method: "PUT",
           headers: {
@@ -43,7 +43,7 @@ const Profile = () => {
       // Close the modal upon successful update
       setIsEditModalOpen(false);
     } catch (error) {
-      console.error("Error updating user:", error);
+      // console.error("Error updating user:", error);
       alert("There was an error updating the user. Please try again.");
     }
   };

@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${id}`)
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);
@@ -52,7 +52,7 @@ export default function ProductDetails() {
 
 
     // Make API call to update user information
-    fetch("http://localhost:5000/buy", {
+    fetch("https://mern-project-react-routing-firebase-server.vercel.app/buy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default function ProductDetails() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           toast.success("Buying Successful", {
             position: "top-right",

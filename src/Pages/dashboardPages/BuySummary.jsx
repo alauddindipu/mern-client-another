@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle";
 
 const BuySummary = () => {
     const loadedBuyerInfo = useLoaderData();
-    console.log(loadedBuyerInfo);
+    // console.log(loadedBuyerInfo);
 
     return (
         <div className="">

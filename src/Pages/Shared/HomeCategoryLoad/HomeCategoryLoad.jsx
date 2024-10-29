@@ -10,7 +10,7 @@ export default function HomeCategoryLoad() {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/allproducts"
+        "https://mern-project-react-routing-firebase-server.vercel.app/allproducts"
       );
       const data = await response.json();
       setProducts(data);
@@ -27,7 +27,7 @@ export default function HomeCategoryLoad() {
 
   //let uniqueCategoryId = bookCategories.map(item => item.categoryid).filter((value, index, self) => self.indexOf(value) === index);
 
-  console.log(uniqueNames);
+  // console.log(uniqueNames);
   //console.log(uniqueCategoryId)
   // const selectedCourse = course.find(n => n._id === id);
   // res.send(selectedCourse)

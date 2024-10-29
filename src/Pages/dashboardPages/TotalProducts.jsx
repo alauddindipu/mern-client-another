@@ -11,13 +11,13 @@ const TotalProducts = () => {
 
 
     const handleDelete = (_id) => {
-        console.log(_id);
-        fetch(`http://localhost:5000/product/${_id}`, {
+        // console.log(_id);
+        fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (data.deletedCount) {
                     toast.success("Deleted Successfully", {
                         position: "top-right",

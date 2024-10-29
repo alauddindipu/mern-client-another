@@ -5,7 +5,7 @@ import PageTitle from '../components/PageTitle';
 export default function CategoryWiseDetails() {
 
     const selectedCategory = useLoaderData();
-    console.log(selectedCategory);
+    // console.log(selectedCategory);
 
     return (
         <div>

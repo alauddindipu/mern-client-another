@@ -25,7 +25,7 @@ const RegisterPage = () => {
       navigate("/login"); // Redirect on successful registration
     } catch (err) {
       setError(err.message); // Capture and display error message
-      console.error(err.message);
+      // console.error(err.message);
     }
   };
 

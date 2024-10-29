@@ -21,12 +21,12 @@ const AllUsers = () => {
   const fetchUsers = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/users"
+        "https://mern-project-react-routing-firebase-server.vercel.app/users"
       );
       const data = await response.json();
       setUsers(data);
     } catch (error) {
-      console.error("Error fetching users:", error);
+      // console.error("Error fetching users:", error);
     }
   };
 
@@ -37,15 +37,15 @@ const AllUsers = () => {
   // Block a user
   const handleBlock = async () => {
     try {
-      console.log({ selectedUser });
+      // console.log({ selectedUser });
       const updatedUser = {
         ...selectedUser,
         isBlocked: !selectedUser?.isBlocked,
       };
-      console.log({ updatedUser });
+      // console.log({ updatedUser });
 
       await fetch(
-        `http://localhost:5000/user/${selectedUser._id}`,
+        `https://mern-project-react-routing-firebase-server.vercel.app/user/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -57,18 +57,18 @@ const AllUsers = () => {
       fetchUsers(); // Reload users after update
       setIsBlockModalOpen(false);
     } catch (error) {
-      console.error("Error blocking/unblocking user:", error);
+      // console.error("Error blocking/unblocking user:", error);
     }
   };
 
   // Toggle admin status
   const handleToggleAdmin = async () => {
     try {
-      console.log({ selectedUser });
+      // console.log({ selectedUser });
       const updatedUser = { ...selectedUser, isAdmin: !selectedUser?.isAdmin };
 
       await fetch(
-        `http://localhost:5000/user/${selectedUser._id}`,
+        `https://mern-project-react-routing-firebase-server.vercel.app/user/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -80,7 +80,7 @@ const AllUsers = () => {
       fetchUsers(); // Reload users after update
       setIsAdminToggleModalOpen(false);
     } catch (error) {
-      console.error("Error toggling admin status:", error);
+      // console.error("Error toggling admin status:", error);
     }
   };
 
@@ -108,7 +108,7 @@ const AllUsers = () => {
       };
 
       await fetch(
-        `http://localhost:5000/user/${selectedUser._id}`,
+        `https://mern-project-react-routing-firebase-server.vercel.app/user/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -120,7 +120,7 @@ const AllUsers = () => {
       fetchUsers(); // Reload users after update
       setIsEditModalOpen(false);
     } catch (error) {
-      console.error("Error updating user:", error);
+      // console.error("Error updating user:", error);
     }
   };
 

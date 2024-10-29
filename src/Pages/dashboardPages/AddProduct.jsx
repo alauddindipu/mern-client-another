@@ -85,7 +85,7 @@ const AddProduct = () => {
                     status: formData.status,
                 };
 
-                const result = await fetch('http://localhost:5000/products', {
+                const result = await fetch('https://mern-project-react-routing-firebase-server.vercel.app/products', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -105,7 +105,7 @@ const AddProduct = () => {
                 toast.error('Image upload failed. Please try again.');
             }
         } catch (error) {
-            console.error('Failed to add product:', error);
+            // console.error('Failed to add product:', error);
             toast.error('An error occurred while adding the product.');
         }
     };

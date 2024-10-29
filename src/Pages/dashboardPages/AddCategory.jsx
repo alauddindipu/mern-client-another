@@ -12,9 +12,9 @@ function AddCategory() {
         const cid = form.get("categoryid");
 
         const category = { cname, cid };
-        console.log(category);
+        // console.log(category);
 
-        fetch("http://localhost:5000/category", {
+        fetch("https://mern-project-react-routing-firebase-server.vercel.app/category", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -23,7 +23,7 @@ function AddCategory() {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (data.insertedId) {
                     toast.success("Category Added Successfully", {
                         position: "top-right",

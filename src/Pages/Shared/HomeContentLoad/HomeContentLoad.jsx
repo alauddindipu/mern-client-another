@@ -5,11 +5,11 @@ export default function HomeContentLoad() {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products`)
+    fetch(`https://mern-project-react-routing-firebase-server.vercel.app/products`)
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);
-  console.log(course);
+  // console.log(course);
   return (
     <div>
       <div className="">

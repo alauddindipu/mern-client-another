@@ -44,12 +44,12 @@ const routes = createBrowserRouter([
         element: (<PrivateRoute>
           <ProductDetails></ProductDetails>
         </PrivateRoute>),
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${params.id}`)
       },
       {
         path: "/bookCategoryWiseDetails/:category",
         element: <CategoryWiseDetails></CategoryWiseDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/bookCategoryWiseDetails/${params.category}`)
+        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/bookCategoryWiseDetails/${params.category}`)
       },
     ]
   },
@@ -78,29 +78,29 @@ const routes = createBrowserRouter([
       {
         path: "allCategory",
         element: <AllCategories />,
-        loader: () => fetch("http://localhost:5000/category"),
+        loader: () => fetch("https://mern-project-react-routing-firebase-server.vercel.app/category"),
       },
 
       {
         path: "products",//to get categories in products page drop down
         element: <AddProduct />,
-        loader: () => fetch("http://localhost:5000/categories"),
+        loader: () => fetch("https://mern-project-react-routing-firebase-server.vercel.app/categories"),
       },
       {
         path: "totalProducts",
         element: <TotalProducts />,
-        loader: () => fetch("http://localhost:5000/totalProducts"),
+        loader: () => fetch("https://mern-project-react-routing-firebase-server.vercel.app/totalProducts"),
       },
       {
         path: "buySummary/:userId",
         element: <BuySummary />,
-        loader: ({ params }) => fetch(`http://localhost:5000/buySummary/${params.userId}`),
+        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/buySummary/${params.userId}`),
       },
 
       {
         path: "edit/:id",
         element: <Edit></Edit>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
+        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${params.id}`),
       },
 
 

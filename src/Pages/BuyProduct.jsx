@@ -45,7 +45,7 @@ const BuyProduct = () => {
 
 
     // Make API call to update user information
-    fetch("http://localhost:5000/buy", {
+    fetch("https://mern-project-react-routing-firebase-server.vercel.app/buy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const BuyProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           toast.success("Added Successfully", {
             position: "top-right",

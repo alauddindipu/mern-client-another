@@ -9,11 +9,11 @@ const Course = () => {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/totalProducts")
+    fetch("https://mern-project-react-routing-firebase-server.vercel.app/totalProducts")
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);
-  console.log(course);
+  // console.log(course);
 
   return (<div>
     <div><PageTitle title="Products Page"></PageTitle></div>

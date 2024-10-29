@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
 
       // Send user data to backend
       const response = await fetch(
-        "http://localhost:5000/users",
+        "https://mern-project-react-routing-firebase-server.vercel.app/users",
         {
           method: "POST",
           headers: {
@@ -79,7 +79,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         try {
           const res = await fetch(
-            `http://localhost:5000/user/${currentUser.uid}`
+            `https://mern-project-react-routing-firebase-server.vercel.app/user/${currentUser.uid}`
           );
 
           if (!res.ok) {
