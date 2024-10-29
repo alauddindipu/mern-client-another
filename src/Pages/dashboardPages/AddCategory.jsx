@@ -14,7 +14,7 @@ function AddCategory() {
         const category = { cname, cid };
         // console.log(category);
 
-        fetch("https://mern-project-react-routing-firebase-server.vercel.app/category", {
+        fetch("https://mern-server-1-evbt.onrender.com/category", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

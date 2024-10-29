@@ -26,7 +26,7 @@ const Profile = () => {
 
       // Make API call to update user information
       const response = await fetch(
-        `https://mern-project-react-routing-firebase-server.vercel.app/user/${user._id}`,
+        `https://mern-server-1-evbt.onrender.com/user/${user._id}`,
         {
           method: "PUT",
           headers: {

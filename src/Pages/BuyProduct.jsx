@@ -45,7 +45,7 @@ const BuyProduct = () => {
 
 
     // Make API call to update user information
-    fetch("https://mern-project-react-routing-firebase-server.vercel.app/buy", {
+    fetch("https://mern-server-1-evbt.onrender.com/buy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -17,7 +17,7 @@ const Edit = () => {
         const updatedProduct = { productName, description };
         // console.log("Updated:", updatedProduct);
 
-        fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${loadedProduct._id}`, {
+        fetch(`https://mern-server-1-evbt.onrender.com/product/${loadedProduct._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

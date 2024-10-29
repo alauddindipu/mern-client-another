@@ -21,7 +21,7 @@ const AllUsers = () => {
   const fetchUsers = async () => {
     try {
       const response = await fetch(
-        "https://mern-project-react-routing-firebase-server.vercel.app/users"
+        "https://mern-server-1-evbt.onrender.com/users"
       );
       const data = await response.json();
       setUsers(data);
@@ -45,7 +45,7 @@ const AllUsers = () => {
       // console.log({ updatedUser });
 
       await fetch(
-        `https://mern-project-react-routing-firebase-server.vercel.app/user/${selectedUser._id}`,
+        `https://mern-server-1-evbt.onrender.com/user/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -68,7 +68,7 @@ const AllUsers = () => {
       const updatedUser = { ...selectedUser, isAdmin: !selectedUser?.isAdmin };
 
       await fetch(
-        `https://mern-project-react-routing-firebase-server.vercel.app/user/${selectedUser._id}`,
+        `https://mern-server-1-evbt.onrender.com/user/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -108,7 +108,7 @@ const AllUsers = () => {
       };
 
       await fetch(
-        `https://mern-project-react-routing-firebase-server.vercel.app/user/${selectedUser._id}`,
+        `https://mern-server-1-evbt.onrender.com/user/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {

@@ -44,12 +44,12 @@ const routes = createBrowserRouter([
         element: (<PrivateRoute>
           <ProductDetails></ProductDetails>
         </PrivateRoute>),
-        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://mern-server-1-evbt.onrender.com/product/${params.id}`)
       },
       {
         path: "/bookCategoryWiseDetails/:category",
         element: <CategoryWiseDetails></CategoryWiseDetails>,
-        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/bookCategoryWiseDetails/${params.category}`)
+        loader: ({ params }) => fetch(`https://mern-server-1-evbt.onrender.com/bookCategoryWiseDetails/${params.category}`)
       },
     ]
   },
@@ -78,29 +78,29 @@ const routes = createBrowserRouter([
       {
         path: "allCategory",
         element: <AllCategories />,
-        loader: () => fetch("https://mern-project-react-routing-firebase-server.vercel.app/category"),
+        loader: () => fetch("https://mern-server-1-evbt.onrender.com/category"),
       },
 
       {
         path: "products",//to get categories in products page drop down
         element: <AddProduct />,
-        loader: () => fetch("https://mern-project-react-routing-firebase-server.vercel.app/categories"),
+        loader: () => fetch("https://mern-server-1-evbt.onrender.com/categories"),
       },
       {
         path: "totalProducts",
         element: <TotalProducts />,
-        loader: () => fetch("https://mern-project-react-routing-firebase-server.vercel.app/totalProducts"),
+        loader: () => fetch("https://mern-server-1-evbt.onrender.com/totalProducts"),
       },
       {
         path: "buySummary/:userId",
         element: <BuySummary />,
-        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/buySummary/${params.userId}`),
+        loader: ({ params }) => fetch(`https://mern-server-1-evbt.onrender.com/buySummary/${params.userId}`),
       },
 
       {
         path: "edit/:id",
         element: <Edit></Edit>,
-        loader: ({ params }) => fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${params.id}`),
+        loader: ({ params }) => fetch(`https://mern-server-1-evbt.onrender.com/product/${params.id}`),
       },
 
 

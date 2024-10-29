@@ -85,7 +85,7 @@ const AddProduct = () => {
                     status: formData.status,
                 };
 
-                const result = await fetch('https://mern-project-react-routing-firebase-server.vercel.app/products', {
+                const result = await fetch('https://mern-server-1-evbt.onrender.com/products', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

@@ -12,7 +12,7 @@ const TotalProducts = () => {
 
     const handleDelete = (_id) => {
         // console.log(_id);
-        fetch(`https://mern-project-react-routing-firebase-server.vercel.app/product/${_id}`, {
+        fetch(`https://mern-server-1-evbt.onrender.com/product/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

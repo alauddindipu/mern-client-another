@@ -5,7 +5,7 @@ export default function HomeContentLoad() {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`https://mern-project-react-routing-firebase-server.vercel.app/products`)
+    fetch(`https://mern-server-1-evbt.onrender.com/products`)
       .then(res => res.json())
       .then(data => setCourse(data));
   }, []);
